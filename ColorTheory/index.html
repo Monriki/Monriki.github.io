@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Color Theory Lab | 色彩理论学习站</title>
+  <meta name="description" content="一个用于学习色彩理论的静态网站，包含各流派与交互式色彩和谐工具。" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Color Theory Lab</h1>
+    <p class="tagline">系统学习色彩理论 · 探索各派系与和谐方案</p>
+    <nav class="main-nav">
+      <a href="#tool">色彩和谐工具</a>
+      <a href="#schools">色彩理论派系</a>
+      <a href="#guides">学习指南</a>
+      <a href="https://www.color-hex.com/" target="_blank" rel="noopener">外部工具</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="tool" class="card">
+      <h2>色彩和谐工具</h2>
+      <p class="muted">选择和谐方案并调整参数，查看实时配色。</p>
+      <div class="controls">
+        <label>基准色相 Hue：<input type="range" id="hue" min="0" max="360" value="200" /><span id="hueVal">200°</span></label>
+        <label>饱和度 Saturation：<input type="range" id="sat" min="0" max="100" value="70" /><span id="satVal">70%</span></label>
+        <label>明度 Lightness：<input type="range" id="light" min="0" max="100" value="50" /><span id="lightVal">50%</span></label>
+        <label>和谐方案：
+          <select id="harmony">
+            <option value="mono">单色 Monochromatic</option>
+            <option value="complement">互补 Complementary</option>
+            <option value="split">分裂互补 Split-Complementary</option>
+            <option value="analogous">类似 Analogous</option>
+            <option value="triad">三角 Triadic</option>
+            <option value="tetrad">四方 Tetradic</option>
+          </select>
+        </label>
+      </div>
+      <div id="palette" class="palette"></div>
+    </section>
+
+    <section id="schools" class="card">
+      <h2>色彩理论派系</h2>
+      <p class="muted">浏览国外与国内的主要色彩体系与代表人物。</p>
+      <div class="grid">
+        <a class="grid-item" href="schools/itten-bauhaus.html">
+          <h3>包豪斯 / 伊顿 (Itten)</h3>
+          <p>十二色环、对比与构成方法。</p>
+        </a>
+        <a class="grid-item" href="schools/munsell.html">
+          <h3>曼塞尔 (Munsell)</h3>
+          <p>色相-明度-彩度三维空间与均匀感知。</p>
+        </a>
+        <a class="grid-item" href="schools/goethe.html">
+          <h3>歌德 (Goethe)</h3>
+          <p>现象学与心理色彩学观点。</p>
+        </a>
+        <a class="grid-item" href="schools/ostwald.html">
+          <h3>奥斯华德 (Ostwald)</h3>
+          <p>系统化的颜色组合与和谐关系。</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="guides" class="card">
+      <h2>学习指南</h2>
+      <ul class="list">
+        <li><a href="#">RGB / CMYK / HSB 关系与转换</a></li>
+        <li><a href="#">常见配色策略：品牌、UI、插画</a></li>
+        <li><a href="#">色弱与无障碍配色注意事项</a></li>
+        <li><a href="#">参考书目与优质资源集锦</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Color Theory Lab · 静态网站示例</p>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
